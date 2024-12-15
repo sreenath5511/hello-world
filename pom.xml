@@ -15,12 +15,7 @@
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
   </properties>
-  <properties>
-     <maven.compiler.source>11</maven.compiler.source>
-     <maven.compiler.target>11</maven.compiler.target>
- </properties>
-
-  <modules>
+    <modules>
     <module>server</module>
     <module>webapp</module>
   </modules>
@@ -34,6 +29,12 @@
   </distributionManagement>
 
   <build>
+    <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-war-plugin</artifactId>
+    <version>3.3.1</version>
+</plugin>
+           
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
